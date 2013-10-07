@@ -1,5 +1,7 @@
 require 'spec_helper'
 
 describe Gadget do
-  pending "add some examples to (or delete) #{__FILE__}"
+  it "should be valid" do
+    Gadget.new(:name=>"abc")
+  end
 end
