@@ -1,0 +1,11 @@
+<% @gadgets.each do |gadget| %>
+  <h3><%= gadget.name %></h3><%= link_to "Delete", gadget_path(gadget), :method=>:delete, :confirm=>"Are you sure?" %>
+  <p>
+    <% gadget.images.map{|c| c.image.url(:medium)}.each do |url| %>
+      <%= image_tag url %>
+    <% end %>
+  </p>
+  <hr />
+<% end %>
+<hr/>
+<%= link_to "New Gadget", :action=>:new %>

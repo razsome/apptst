@@ -1,0 +1,16 @@
+<h2>New Gadget</h2>
+
+<%= render "shared/error_messages", :target => @gadget %>
+
+<%= form_for @gadget do |f| %>
+  <p>
+    <%= f.label :name %>
+    <%= f.text_field :name, :class=>"form-control", :placeholder=>"Name" %>
+  <p>
+  <p>
+    <%= f.file_field :images, :multiple=>true %>
+  </p>
+  <br/>
+  <%= f.submit "Add" %>
+
+<% end %>
