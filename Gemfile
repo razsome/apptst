@@ -44,7 +44,7 @@ end
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 gem "authlogic"
-
+gem "paperclip"
 group :development, :test do
   gem 'rspec-rails', '~> 2.0'
 end
