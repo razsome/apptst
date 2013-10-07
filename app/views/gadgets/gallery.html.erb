@@ -1,0 +1,9 @@
+<% @gadgets.each do |gadget| %>
+  <div style="float:left;width:130px;">
+    <%= image_tag gadget.images.first.image.url(:thumb) %>
+    <br/><%= gadget.name %>
+  </div>
+<% end %>
+<div style="clear:both;"></div>
+<hr/>
+<%= link_to "New Gadget", :action=>:new %>

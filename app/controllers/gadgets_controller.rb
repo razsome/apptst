@@ -2,6 +2,7 @@ class GadgetsController < ApplicationController
   before_filter :require_user
   def index
     @gadgets = current_user.gadgets
+    render :action => "gallery" if params[:type]=="gallery"
   end
   def new
     @gadget = Gadget.new

@@ -8,6 +8,9 @@
 </head>
 <body>
 <% if current_user %>
+<%= link_to "Gadget Gallery", :controller=>:gadgets, :action=>:index, :type=>:gallery %>
+<%= link_to "Gadget List", :controller=>:gadgets, :action=>:index %>
+
 <%= link_to "Logout", "/logout" %>
 <% else %>
 <%= link_to "Login", :action=>:new, :controller=>:user_sessions %>
